@@ -1,24 +1,33 @@
-# README
+# WHERE TO REPAIR
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+ ##Description
 
-* Ruby version
+ Where To Repair is a full stack Ruby on Rails app, that will help you get the best quote for car repair in 1 easy step. Just fill in the form, tell us what service do you need and we will contact our partners to get the best price for you. There is also an admin account to maintain companies database.
 
-* System dependencies
 
-* Configuration
+ ###Entity Relationship Diagram
 
-* Database creation
+![Entity Relationship Diagram](public/ERD.png)
 
-* Database initialization
 
-* How to run the test suite
+ ### Wireframes
 
-* Services (job queues, cache servers, search engines, etc.)
+ ![Wireframes](public/Wireframes.png)
 
-* Deployment instructions
 
-* ...
+ ### Technologies used
+
+ + Ruby on Rails
+ + PostgreSQL database
+ + Materialize
+ + jQuery
+
+
+ ### Planned features
+
+ + Mailer gem
+ + Ratings gem
+ + Social share button
+ + Google maps
+ + YELP API
