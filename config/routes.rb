@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
 
   get '/companies/:company_id', to: "companies#show", as: "show_companies"
-  get '/companies/:company_id/services', to: 'services#show', as: "show_services"
+  get '/companies/:company_id/services', to: 'services#index', as: "services"
 end
