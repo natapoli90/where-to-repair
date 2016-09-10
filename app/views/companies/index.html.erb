@@ -1,3 +1,7 @@
 <% @companies.each do |company|%>
-<%= link_to "#{company.name}", show_companies_path(company), class: "links" %>
+<ul>
+  <li>
+    <%= link_to "#{company.name}", show_companies_path(company), class: "links" %>
+  </li>
+</ul>
 <% end %>

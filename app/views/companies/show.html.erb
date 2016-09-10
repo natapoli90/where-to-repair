@@ -1,4 +1,6 @@
-<%= @company.name %>
-<%= @company.city %>
-<%= @company.phone %>
-<%= link_to "All Services", show_services_path, class: "links" %>
+<ul>
+  <li><%= @company.name %></li>
+  <li><%= @company.city %></li>
+  <li><%= @company.phone %></li>
+  <li><%= link_to "All Services", show_services_path, class: "links" %></li>
+</ul>
