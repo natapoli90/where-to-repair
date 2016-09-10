@@ -1,0 +1,3 @@
+<% @companies.each do |company|%>
+<h4 class="card-title splash-city-text"><%= link_to "#{company.name}", "/companies/#{company.id}" %></h4>
+<% end %>
