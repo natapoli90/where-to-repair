@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160909212234) do
+ActiveRecord::Schema.define(version: 20160910063753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,4 +22,31 @@ ActiveRecord::Schema.define(version: 20160909212234) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "company_services", force: :cascade do |t|
+    t.integer "service_id"
+    t.integer "company_id"
+    t.index ["company_id"], name: "index_company_services_on_company_id", using: :btree
+    t.index ["service_id"], name: "index_company_services_on_service_id", using: :btree
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "category"
+  end
+
+  add_foreign_key "company_services", "companies"
+  add_foreign_key "company_services", "services"
 end
