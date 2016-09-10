@@ -34,10 +34,10 @@ ActiveRecord::Schema.define(version: 20160910063753) do
   end
 
   create_table "company_services", force: :cascade do |t|
-    t.integer "services_id"
-    t.integer "companies_id"
-    t.index ["companies_id"], name: "index_company_services_on_companies_id", using: :btree
-    t.index ["services_id"], name: "index_company_services_on_services_id", using: :btree
+    t.integer "service_id"
+    t.integer "company_id"
+    t.index ["company_id"], name: "index_company_services_on_company_id", using: :btree
+    t.index ["service_id"], name: "index_company_services_on_service_id", using: :btree
   end
 
   create_table "services", force: :cascade do |t|
@@ -47,6 +47,6 @@ ActiveRecord::Schema.define(version: 20160910063753) do
     t.string   "category"
   end
 
-  add_foreign_key "company_services", "companies", column: "companies_id"
-  add_foreign_key "company_services", "services", column: "services_id"
+  add_foreign_key "company_services", "companies"
+  add_foreign_key "company_services", "services"
 end
