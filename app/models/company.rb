@@ -1,3 +1,4 @@
 class Company < ApplicationRecord
-  has_and_belongs_to_many :services
+  has_many :company_services, dependent: :destroy
+  has_many :services, through: :company_services
 end

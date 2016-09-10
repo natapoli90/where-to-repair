@@ -1,3 +1,4 @@
 class Service < ApplicationRecord
-  has_and_belongs_to_many :companies
+  has_many :company_services
+  has_many :companies, through: :company_services
 end

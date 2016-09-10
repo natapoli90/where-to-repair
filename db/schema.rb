@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160910034435) do
+ActiveRecord::Schema.define(version: 20160910063753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,13 +20,6 @@ ActiveRecord::Schema.define(version: 20160910034435) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-  end
-
-  create_table "comapnies_services", id: false, force: :cascade do |t|
-    t.integer "comapny_id", null: false
-    t.integer "service_id", null: false
-    t.index ["comapny_id", "service_id"], name: "index_comapnies_services_on_comapny_id_and_service_id", using: :btree
-    t.index ["service_id", "comapny_id"], name: "index_comapnies_services_on_service_id_and_comapny_id", using: :btree
   end
 
   create_table "companies", force: :cascade do |t|
@@ -40,6 +33,13 @@ ActiveRecord::Schema.define(version: 20160910034435) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "company_services", force: :cascade do |t|
+    t.integer "services_id"
+    t.integer "companies_id"
+    t.index ["companies_id"], name: "index_company_services_on_companies_id", using: :btree
+    t.index ["services_id"], name: "index_company_services_on_services_id", using: :btree
+  end
+
   create_table "services", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -47,4 +47,6 @@ ActiveRecord::Schema.define(version: 20160910034435) do
     t.string   "category"
   end
 
+  add_foreign_key "company_services", "companies", column: "companies_id"
+  add_foreign_key "company_services", "services", column: "services_id"
 end
