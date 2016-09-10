@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160909212234) do
+ActiveRecord::Schema.define(version: 20160910034435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,31 @@ ActiveRecord::Schema.define(version: 20160909212234) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "comapnies_services", id: false, force: :cascade do |t|
+    t.integer "comapny_id", null: false
+    t.integer "service_id", null: false
+    t.index ["comapny_id", "service_id"], name: "index_comapnies_services_on_comapny_id_and_service_id", using: :btree
+    t.index ["service_id", "comapny_id"], name: "index_comapnies_services_on_service_id_and_comapny_id", using: :btree
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "category"
   end
 
 end
