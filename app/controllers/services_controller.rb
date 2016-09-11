@@ -22,6 +22,20 @@ class ServicesController < ApplicationController
     end
   end
 
+  def edit
+    @service = Company.find(params[:company_id]).services.find_by(params[:service_id])
+  end
+
+def update
+  @service = Company.find(params[:company_id]).services.find_by(params[:service_id])
+  if @service.update(service_params)
+    flash[:success] = "#{@service.name} successfully updated"
+    redirect_to company_services_path
+  else
+    render :edit
+  end
+end
+
   def delete
     @service = Company.find(params[:company_id]).services.find_by(params[:service_id]).delete
     flash[:success] = "service was successfully deleted"

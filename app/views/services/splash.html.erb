@@ -3,7 +3,8 @@
 <ul>
   <li>
     <%= service.name %>
-    <%= link_to "Delete Company Service", delete_company_service_path(@company, service), method: :delete %>
+    <%= link_to "Delete Service", delete_company_service_path(@company, service), method: :delete %>
+    <%= link_to "Edit Service", edit_company_service_path(@company, service), method: :get %>
 </li>
 </ul>
 <% end %>
