@@ -13,8 +13,9 @@ class CompanyServicesController < ApplicationController
   def create
     @company = Company.find_by_id(params[:company_id])
     @service = Service.new(service_params)
+    @company.services << @service
     if @service.save
-      @company.services.push(@service)
+
       flash[:success] = "Your service was successfully submitted"
       redirect_to company_services_path
     else

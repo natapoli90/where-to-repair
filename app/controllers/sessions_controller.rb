@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @admin = Admin.confirm(admin_params)
-    if @admin
+    @admin = Admin.new(admin_params)
+    if @admin.save
       login(@admin)
       flash[:success] = "Successfully logged in."
       redirect_to companies_path
