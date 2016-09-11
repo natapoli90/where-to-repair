@@ -4,11 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @admin = Admin.confirm(admin_params)
-    if @admin
-      session[:admin_id] = @admin.id
+    @admin = Admin.new(admin_params)
+    if @admin.save
+      login(@admin)
       flash[:success] = "Successfully logged in."
-      redirect_to root_path
+      redirect_to companies_path
     else
       flash[:error] = "Incorrect email or password."
       redirect_to '/login'
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:admin_id] = nil
     flash[:notice] = "Successfully logged out."
-    redirect_to root_path
+    redirect_to companies_path
   end
 
   private

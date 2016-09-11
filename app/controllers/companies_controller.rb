@@ -1,6 +1,5 @@
 class CompaniesController < ApplicationController
-  include SessionsHelper
-  include AdminsHelper
+  before_action :logged_in?, except: [:index, :show]
 
   def index
     @companies = Company.all
@@ -24,7 +23,7 @@ class CompaniesController < ApplicationController
         redirect_to show_company_path(@company)
       else
         flash[:notice] = "There are some errors. #{@company.errors.full_messages.join(', ')}. Please, try again"
-        redirect_to companies_path
+        redirect_to new_company_path
       end
   end
 

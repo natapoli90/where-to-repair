@@ -1,7 +1,7 @@
 module SessionsHelper
 
   def login(admin)
-    session[:admin_id] = admin
+    session[:admin_id] = admin.id
     @current_admin = admin
   end
 
