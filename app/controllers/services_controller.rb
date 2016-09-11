@@ -2,7 +2,7 @@ class ServicesController < ApplicationController
 
   def splash
     @company = Company.find_by_id(params[:company_id])
-    @service = Service.find_by(params[:service_id])
+    @service = Service.find_by_id(params[:service_id])
   end
 
   def new
@@ -15,11 +15,21 @@ class ServicesController < ApplicationController
     if @service.save
       @company.services.push(@service)
       flash[:success] = "Your service was successfully submitted"
-      redirect_to services_path
+      redirect_to company_services_path
     else
       flash[:notice] = "There are some errors. #{@service.errors.full_messages.join(', ')}. Plese try again."
       redirect_to new_service_path
     end
+  end
+
+  def delete
+    @company = Company.find_by_id(params[:company_id])
+    @service =  @company.services.find_by_id(params[:service_id])
+    if @company.services
+    @company.services.delete(@service)
+    flash[:success] = "service was successfully deleted"
+    redirect_to company_services_path
+  end
   end
 
   private

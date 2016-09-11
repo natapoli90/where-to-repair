@@ -16,7 +16,8 @@ Rails.application.routes.draw do
 
 
 
-  get '/companies/:company_id/services', to: 'services#splash', as: "services"
+  get '/companies/:company_id/services', to: 'services#splash', as: "company_services"
   get '/companies/:company_id/services/new', to: "services#new", as: "new_service"
   post '/companies/:company_id/services', to: "services#create", as: "new_company_service"
+  delete '/companies/:company_id/services/:services_id', to: "services#delete", as: "delete_company_service"
 end
