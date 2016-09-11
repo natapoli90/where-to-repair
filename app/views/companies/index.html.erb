@@ -1,7 +1,11 @@
 <% @companies.each do |company|%>
 <ul>
   <li>
-    <%= link_to "#{company.name}", show_companies_path(company), class: "links" %>
+    <%= link_to "#{company.name}", show_company_path(company) %>
   </li>
 </ul>
+<% end %>
+<% if current_admin != nil && current_admin.id == @admin.id %>
+    <%= link_to "New Company", new_company_path %>
+  
 <% end %>
