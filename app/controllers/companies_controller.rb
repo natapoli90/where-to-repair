@@ -1,6 +1,5 @@
 class CompaniesController < ApplicationController
-  include SessionsHelper
-  include AdminsHelper
+  before_action :logged_in?, except: [:index, :show]
 
   def index
     @companies = Company.all

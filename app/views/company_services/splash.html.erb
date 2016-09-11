@@ -1,10 +1,15 @@
-<%= link_to "New Service", new_service_path %>
+<% if current_admin %>
+  Signed in as <%= current_admin.email %> | <%= link_to "Logout", '/logout' %>
+  <%= link_to "New Service", new_service_path %>
+<% end %>
 <% @company.services.each do |service| %>
 <ul>
   <li>
     <%= service.name %>
+    <% if current_admin %>
     <%= link_to "Edit Service", edit_company_service_path(@company, service), method: :get %>
     <%= link_to "Delete Service", delete_company_service_path(@company, service), method: :delete %>
+    <% end %>
 </li>
 </ul>
 <% end %>
