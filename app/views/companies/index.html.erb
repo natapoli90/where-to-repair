@@ -5,7 +5,4 @@
   </li>
 </ul>
 <% end %>
-<% if current_admin != nil && current_admin.id == @admin.id %>
-    <%= link_to "New Company", new_company_path %>
-  
-<% end %>
+<%= link_to "New Company", new_company_path %>

@@ -4,3 +4,5 @@
   <li><%= @company.phone %></li>
   <li><%= link_to "All Services", services_path %></li>
 </ul>
+<%= link_to "Edit Company", edit_company_path, method: :get %>
+<%= link_to "Delete Company", delete_company_path, method: :delete %>

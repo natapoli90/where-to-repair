@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get '/companies/new', to: "companies#new", as: "new_company"
   post '/companies', to: "companies#create"
   get '/companies/:company_id', to: "companies#show", as: "show_company"
+  get '/companies/:company_id/edit', to: "companies#edit", as: "edit_company"
+  patch '/companies/:company_id', to: "companies#update", as: "update_company"
+  delete '/companies/:company_id', to: "companies#destroy", as: "delete_company"
 
 
 
