@@ -23,13 +23,9 @@ class ServicesController < ApplicationController
   end
 
   def delete
-    @company = Company.find_by_id(params[:company_id])
-    @service =  @company.services.find_by_id(params[:service_id])
-    if @company.services
-    @company.services.delete(@service)
+    @service = Company.find(params[:company_id]).services.find_by(params[:service_id]).delete
     flash[:success] = "service was successfully deleted"
     redirect_to company_services_path
-  end
   end
 
   private
