@@ -1,0 +1,10 @@
+<%= link_to "New Service", new_service_path %>
+<% @company.services.each do |service| %>
+<ul>
+  <li>
+    <%= service.name %>
+    <%= link_to "Edit Service", edit_company_service_path(@company, service), method: :get %>
+    <%= link_to "Delete Service", delete_company_service_path(@company, service), method: :delete %>
+</li>
+</ul>
+<% end %>

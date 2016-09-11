@@ -1,0 +1,7 @@
+<%= form_for @service, url: update_company_service_path, method: :patch do |f| %>
+  <h1>Edit Service</h1>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :category, placeholder: "Category" %>
+  <%= f.submit "Submit" %>
+<% end %>
+</form>
