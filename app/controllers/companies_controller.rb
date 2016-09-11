@@ -20,11 +20,10 @@ class CompaniesController < ApplicationController
         @company.image_url = "http://i.imgur.com/ixpF82Y.png"
       end
       if @company.save
-        login(@admin)
         flash[:notice] = "You successfully created new company."
         redirect_to show_company_path(@company)
       else
-        flash[:notice] = "There are some errors. #{@user.errors.full_messages.join(', ')}. Please, try again"
+        flash[:notice] = "There are some errors. #{@company.errors.full_messages.join(', ')}. Please, try again"
         redirect_to companies_path
       end
   end

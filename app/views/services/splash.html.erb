@@ -1,0 +1,8 @@
+<%= link_to "New Service", new_service_path %>
+<% @company.services.each do |service| %>
+<ul>
+  <li>
+    <%= service.name %>
+</li>
+</ul>
+<% end %>

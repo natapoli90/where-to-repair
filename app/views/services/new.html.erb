@@ -1,0 +1,7 @@
+<%= form_for @service, url: new_company_service_path  do |f| %>
+  <h1>New Service</h1>
+  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :category, placeholder: "Category" %>
+  <%= f.submit "Submit" %>
+<% end %>
+</form>
