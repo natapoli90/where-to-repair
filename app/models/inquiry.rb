@@ -7,12 +7,15 @@ class Inquiry < MailForm::Base
   attribute :car_model,      :validate => true
   attribute :car_year,      :validate => true
   attribute :message
+  attribute :emails
+  attribute :name,      :validate => true
+  attribute :category,      :validate => true
   attribute :nickname,  :captcha  => true
 
   def headers
     {
       :subject => "Quote Request",
-      :to => "natapoli90@gmail.com",
+      :to => %(#{emails}),
       :from => %("#{first_name} #{last_name}" <#{email}>)
     }
   end
