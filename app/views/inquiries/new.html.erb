@@ -1,0 +1,14 @@
+<%= form_for @inquiry do |f| %>
+  <h1>Inquiry form</h1>
+  <%= f.text_field :first_name, placeholder: "First name" %>
+  <%= f.text_field :last_name, placeholder: "Last name" %>
+  <%= f.text_field :email, placeholder: "Email" %>
+  <%= f.text_field :car_make, placeholder: "Car make" %>
+  <%= f.text_field :car_model, placeholder: "Car model" %>
+  <%= f.text_field :car_year, placeholder: "Car year" %>
+  <%= f.text_area :message, placeholder: "Message" %>
+  <%= f.text_field :nickname, placeholder: "Nickname", class: "hidden" %>
+  <%= f.file_field :file, placeholder: "Attach file" %>
+  <%= f.submit "Get a quote" %>
+<% end %>
+</form>

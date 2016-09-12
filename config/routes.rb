@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   get '/companies/:company_id/services/:services_id/edit', to: "company_services#edit", as: "edit_company_service"
   patch '/companies/:company_id/services/:services_id', to: "company_services#update", as: "update_company_service"
   delete '/companies/:company_id/services/:services_id', to: "company_services#delete", as: "delete_company_service"
+
+  resources :inquiries, only: [:new, :create]
 end
