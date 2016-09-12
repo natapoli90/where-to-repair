@@ -16,7 +16,7 @@ class Inquiry < MailForm::Base
     {
       :subject => "Quote Request",
       :to => %(#{emails}),
-      :from => %("#{first_name} #{last_name}" <#{email}>)
+      :from => %(#{email})
     }
   end
 end
