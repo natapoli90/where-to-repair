@@ -8,9 +8,7 @@ class InquiriesController < ApplicationController
   def create
     @inquiry= Inquiry.new(params[:inquiry])
     @inquiry.request = request
-
     @service = Service.find_by(name: params[:name])
-    #p @service.companies
     @companies = @service.companies
     @emails = []
     @companies.each do |co|
@@ -19,8 +17,6 @@ class InquiriesController < ApplicationController
     @inquiry.emails = @emails
     @inquiry.name = @service.name
     @inquiry.category = @service.category
-
-    p @inquiry.deliver
     if @inquiry.deliver
       flash[:error] = nil
     else
