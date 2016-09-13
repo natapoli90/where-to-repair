@@ -14,13 +14,23 @@
  *= require_self
  */
  @import "materialize/components/color";
- $primary-color: color("materialize-lime", "darken-4") !default;
- $secondary-color: color("lime", " darken-1") !default;
- $success-color: color("green", "base") !default;
- $error-color: color("red", "base") !default;
- $link-color: color("lime", "darken-4") !default;
+ $primary-color: #827717!default;
+ $primary-text-color: #CDDC39 !default;
  @import 'materialize';
 
+ .dark-primary-color    { background: #827717; }
+ .default-primary-color { background: #827717; }
+ .light-primary-color   { background: #CDDC39; }
+ .text-primary-color    { color: #CDDC39; }
+ .accent-color          { background:#F4FF81; }
+ .primary-text-color    { color: #CDDC39; }
+ .secondary-text-color  { color: #757575; }
+ .divider-color         { border-color: #F4FF81; }
+
+ input:focus {
+   border-bottom: 1px solid #F4FF81;
+   box-shadow: 0 1px 0 0 #F4FF81;
+ }
  .parallax-container {
     background-size: cover;
     height: 632px;
@@ -43,8 +53,8 @@ main {
 .form {
   position: absolute;
   padding-top: 130px;
-  left: 25%;
-  right: 25%;
+  left: 30%;
+  right: 30%;
 
 
 }
