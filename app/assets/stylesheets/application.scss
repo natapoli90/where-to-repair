@@ -23,6 +23,7 @@
 
  .parallax-container {
     background-size: cover;
+    height: 632px;
  }
 
  body {
@@ -34,6 +35,21 @@
 main {
   flex: 1 0 auto;
 }
+
+.parallax {
+  opacity: .5;
+}
+
+.form {
+  position: absolute;
+  padding-top: 130px;
+  left: 25%;
+  right: 25%;
+
+
+}
+
+
 // @media #{$medium-and-down} {
 //   .background {
 //     background-image: url(https://toyota-seohacker.netdna-ssl.com/wp-content/uploads/2015/10/rob-orthen.jpg);
