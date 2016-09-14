@@ -7,8 +7,10 @@
       <span class="primary-text-color">
       <h4>New Service</h4>
       <%= form_for @service, class: "primary-text-color", url: new_company_service_path  do |f| %>
-        <%= f.text_field :name, placeholder: "Name" %>
-        <%= f.text_field :category, placeholder: "Category" %>
+      <label for="input_text">Category:</label>
+    <%= f.collection_select :category, CompanyService::Category, :to_s, :to_s, :include_blank => false, :prompt => "Select Option" %> <br>
+    <label for="input_text">Service Name: </label>
+    <%= f.collection_select :name, CompanyService::Name, :to_s, :to_s, :include_blank => false, :prompt => "Select Option" %> <br>
         <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
       <% end %>
       </form>
