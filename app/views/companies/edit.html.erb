@@ -1,11 +1,22 @@
-<%= form_for @company, url: update_company_path, method: :patch do |f|%>
-  <h1>Edit Company</h1>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :address, placeholder: "Address" %>
-  <%= f.text_field :city, placeholder: "City" %>
-  <%= f.text_field :phone, placeholder: "Phone" %>
-  <%= f.text_field :email, placeholder: "Email" %>
-  <%= f.text_field :image_url, placeholder: "http://my.picture.com/pic.png" %>
-  <%= f.submit "Submit" %>
-<% end %>
-</form>
+<div class="parallax-container">
+  <div class="parallax">
+    <img class = "responsive-img" src="/form.jpg">
+  </div>
+  <div class="container">
+    <div class="card-panel default-primary-color form">
+      <form class="primary-text-color">
+      <h5>Edit Company</h5>
+      <%= form_for @company, url: update_company_path, method: :patch do |f|%>
+        <%= f.text_field :name, placeholder: "Name" %>
+        <%= f.text_field :address, placeholder: "Address" %>
+        <%= f.text_field :city, placeholder: "City" %>
+        <%= f.text_field :phone, placeholder: "Phone" %>
+        <%= f.text_field :email, placeholder: "Email" %>
+        <%= f.text_field :image_url, placeholder: "http://my.picture.com/pic.png" %>
+        <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
+      <% end %>
+      </form>
+      </span>
+    </div>
+  </div>
+</div>
