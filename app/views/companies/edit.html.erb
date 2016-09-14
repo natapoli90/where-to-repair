@@ -4,7 +4,7 @@
   </div>
   <div class="container">
     <div class="card-panel default-primary-color form">
-      <form class="primary-text-color">
+      <span class="primary-text-color">
       <h5>Edit Company</h5>
       <%= form_for @company, url: update_company_path, method: :patch do |f|%>
         <%= f.text_field :name, placeholder: "Name" %>

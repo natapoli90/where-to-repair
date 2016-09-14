@@ -1,7 +1,6 @@
-<% if current_admin %>
-  Signed in as <%= current_admin.email %> | <%= link_to "Logout", '/logout' %>
+
   <%= link_to "New Company", new_company_path %>
-<% end %>
+
 <% @companies.each do |company|%>
 <ul>
   <li>

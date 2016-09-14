@@ -4,7 +4,7 @@
   </div>
   <div class="container">
     <div class="card-panel default-primary-color form">
-      <form class="primary-text-color">
+      <span class="primary-text-color">
       <h3>Login</h3>
       <%= form_for @admin, url: '/login', method: 'post' do |f|  %>
         <%= f.text_field :email, placeholder: "Email" %>
@@ -12,6 +12,7 @@
         <%= f.submit  "Submit", class: "btn waves-effect waves-light lime darken-1"%>
       <% end %>
       </form>
+    </span>
     </div>
   </div>
 </div>
