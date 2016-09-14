@@ -1,7 +1,20 @@
-<%= form_for @service, url: new_company_service_path  do |f| %>
-  <h1>New Service</h1>
-  <%= f.text_field :name, placeholder: "Name" %>
-  <%= f.text_field :category, placeholder: "Category" %>
-  <%= f.submit "Submit" %>
-<% end %>
-</form>
+<div class="parallax-container">
+  <div class="parallax">
+    <img class = "responsive-img" src="/form.jpg">
+  </div>
+  <div class="container">
+    <div class="card-panel default-primary-color form">
+      <span class="primary-text-color">
+      <h4>New Service</h4>
+      <%= form_for @service, class: "primary-text-color", url: new_company_service_path  do |f| %>
+      <label for="input_text">Category:</label>
+    <%= f.collection_select :category, CompanyService::Category, :to_s, :to_s, :include_blank => false, :prompt => "Select Option" %> <br>
+    <label for="input_text">Service Name: </label>
+    <%= f.collection_select :name, CompanyService::Name, :to_s, :to_s, :include_blank => false, :prompt => "Select Option" %> <br>
+        <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
+      <% end %>
+      </form>
+      </span>
+    </div>
+  </div>
+</div>

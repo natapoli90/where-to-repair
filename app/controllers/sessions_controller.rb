@@ -7,10 +7,10 @@ class SessionsController < ApplicationController
     @admin = Admin.new(admin_params)
     if @admin.save
       login(@admin)
-      flash[:success] = "Successfully logged in."
+      flash[:notice] = "Successfully logged in."
       redirect_to companies_path
     else
-      flash[:error] = "Incorrect email or password."
+      flash[:notice] = "Incorrect email or password."
       redirect_to '/login'
     end
   end
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:admin_id] = nil
     flash[:notice] = "Successfully logged out."
-    redirect_to companies_path
+    redirect_to '/login'
   end
 
   private

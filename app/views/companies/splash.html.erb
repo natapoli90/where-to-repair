@@ -1,0 +1,186 @@
+  <div class="parallax-container">
+    <div class="parallax">
+
+      <img class = "responsive-img" src="/back2.jpg">
+<span class="border"></span>
+      </div>
+      <span class="card-title">
+        <div class="valign center">
+          <img class = "responsive-img" src="/logo.png">
+        </div><h1 class="header center-align name secondary-text-color">WHERE TO REPAIR</h1>
+          <h5 class="header center-align">Find best car repair shop in 1 easy step. Best price guarantee!</h5></span>
+<div class="container valign center">
+<%= link_to "How it works", "/#A", class: "btn waves-effect waves-light lime darken-1" %>
+  </div>
+  </div>
+<a name="A"></a>
+  <div class="section white">
+
+    <div class="row container">
+
+      <div class="row">
+
+        <div class="col s12 l4">
+
+          <div class="container valign center">
+          <i class="large material-icons secondary-text-color">assignment</i>
+        </div>
+          <span class="card-title  valign center">
+            <span class="valign center">
+
+            </span>
+            <h4 class="header center-align">Fill in the request</h4>
+              <p class="header center-align">Tell us what happend so we can find the best car repair shops for you.</p></span>
+        </div>
+
+        <div class="col s12 l4">
+
+          <div class="container valign center">
+          <i class="large material-icons secondary-text-color">contact_mail</i>
+        </div>
+
+          <span class="card-title">
+
+            <h4 class="header center-align">Get a quote</h4>
+              <p class="header center-align">Qualified shops will contact you with details via email during 1 hour. </p></span>
+        </div>
+        <div class="col s12 l4">
+
+          <div class="container valign center">
+          <i class="large material-icons secondary-text-color">build</i>
+        </div>
+          <span class="card-title">
+
+            <h4 class="header center-align">Fix your car</h4>
+              <p class="header center-align">Choose the best quote, make an appointment and get it done!</p></span>
+        </div>
+
+
+
+
+</div>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img class = "responsive-img" src="/back3.jpg"></div>
+
+      <div class="container">
+        <h4 class = "center-align">Why choose our sevices?</h4>
+        <div class="row">
+
+  <div class="col s12 l6">
+    <div class="card default-primary-color">
+      <div class="card-content">
+        <span class="card-title primary-text-color"><h5>WE DO THE JOB</h5></span>
+        <p>
+          <input class="primary-text-color" type="checkbox" checked="checked" />
+          <label class = "white-text">We bring you the most accurate
+and fair-price service estimates.</label>
+        </p>
+        <p>
+  <input style="color:#CDDC39;" type="checkbox" checked="checked" />
+  <label class = "white-text">We connect you with service centers
+who will honor the fair-price estimates.</label>
+</p>
+<p>
+  <input class="light-primary-color" type="checkbox" checked="checked" />
+  <label class = "white-text">We works only with trusted service centers
+that are certified for high quality.</label>
+</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col s12 l6">
+    <div class="card default-primary-color">
+      <div class="card-content">
+        <span class="card-title primary-text-color"><h5>YOU SAVE TIME</h5></span>
+        <p>
+          <input class="primary-text-color" type="checkbox" checked="checked" />
+          <label class = "white-text">You enjoy life</label>
+        </p>
+        <p>
+  <input style="color:#CDDC39;" type="checkbox" checked="checked" />
+  <label class = "white-text">You get best prices</label>
+</p>
+<p>
+  <input class="light-primary-color" type="checkbox" checked="checked" />
+  <label class = "white-text">You run your errands</label>
+</p>
+<p>
+  <input class="light-primary-color" type="checkbox" checked="checked" />
+  <label class = "white-text">You hang with your kids</label>
+</p>
+<p>
+  <input class="light-primary-color" type="checkbox" checked="checked" />
+  <label class = "white-text">You run in the park</label>
+</p></br>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</div></br></br>
+
+
+<div class="container valign center">
+      <h4 class = "center-align">What are you waiting for?</h4></br>
+  <%= link_to "Request a quote", "/inquiries/new", class: "btn waves-effect waves-light lime darken-1" %>
+OR <%= link_to "See all shops", "/#B", class: "btn waves-effect waves-light lime darken-1" %>
+    </div>
+</div>
+
+  </div>
+
+
+<a name="B"></a>
+<div class="section white valign center">
+
+<br/>
+          <% if current_admin %>
+    <%= link_to "New Company", new_company_path, class: "btn waves-effect waves-light lime darken-1" %>
+  <% end %>
+
+  <div class="carousel">
+
+<h4 class = "center-align">Slide through shops</h4>
+
+    <a class="carousel-item" href="#one!">  <img class = "activator" src="/allspeedmotors.png">
+</a>
+    <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/yourmechanic.png"></a>
+
+    <a class="carousel-item" href="#one!"><img class = "responsive-img" src="/patgarage.png"></a>
+    <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/lisciousgarage.png"></a>
+
+    <a class="carousel-item" href="#one!"><img class = "responsive-img" src="/mymechanic.png"></a>
+    <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/sfautoworks.png">
+    </a>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <footer class="page-footer">
+  <div class="container">
+    <div class="row">
+        <h5 class="white-text">Whant to become a partner shop, but dont know how?</h5>
+        <h5 class="white-text">Please, contact <%= link_to "ADMIN", "https://github.com/natapoli90", class: "primary-text-color" %><img class = "responsive-img cat" src="/Octocat.png"></h5>
+
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2016 Copyright Text
+    </div>
+  </div>
+</footer>

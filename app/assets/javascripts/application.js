@@ -11,6 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require materialize-sprockets
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
+$(document).on('ready', function(){
+  $('select').material_select();
+  $('.parallax').parallax();
+  $('.button-collapse').sideNav({
+    edge: 'right', // Choose the horizontal origin
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+  });
+    $('.carousel').carousel();
+});

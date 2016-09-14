@@ -1,7 +1,18 @@
-<h1>Login</h1>
-<%= form_for @admin, url: '/login', method: 'post' do |f|  %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  <%= f.submit "Submit" %>
-<% end %>
-</form>
+<div class="parallax-container">
+  <div class="parallax">
+    <img class = "responsive-img" src="/form.jpg">
+  </div>
+  <div class="container">
+    <div class="card-panel default-primary-color form">
+      <span class="primary-text-color">
+      <h3>Login</h3>
+      <%= form_for @admin, url: '/login', method: 'post' do |f|  %>
+        <%= f.text_field :email, placeholder: "Email" %>
+        <%= f.password_field :password, placeholder: "Password" %>
+        <%= f.submit  "Submit", class: "btn waves-effect waves-light lime darken-1"%>
+      <% end %>
+      </form>
+    </span>
+    </div>
+  </div>
+</div>

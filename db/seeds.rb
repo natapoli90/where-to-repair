@@ -21,20 +21,20 @@ ADMINS = [
 
 COMPANIES = [
   {
-    name: "Euro Motorcars",
+    name: "All speed motors",
     address: "SoMa, 240 6th St",
     city: "San Francisco, CA 94103",
     phone: "(415) 255-8140",
     email: "natapoli90@gmail.com",
-    image_url: "http://www.naijaloaded.com.ng/wp-content/uploads/2014/06/YOUNG-SWITT.jpg"
+    image_url: "/allspeedmotors.jpg"
   },
   {
-    name: "Will’s Auto Body",
+    name: "Your Mechanic",
     address: "Inner Richmond, 2715 Geary Blvd",
     city: "San Francisco, CA 94118",
     phone: "(415) 563-8777",
     email: "pxlperfection@gmail.com",
-    image_url: "http://www.naijaloaded.com.ng/wp-content/uploads/2014/06/YOUNG-SWITT.jpg"
+    image_url: "/allspeedmotors"
   },
   {
     name: "Auto Body Garage",
