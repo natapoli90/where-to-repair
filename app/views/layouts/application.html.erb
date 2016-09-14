@@ -17,7 +17,7 @@
           <ul id="slide-out" class="side-nav">
             <li><a href="#A">How it works</a></li>
             <li><a href='/inquiries/new'>Get a quote</a></li>
-            <li><a href='/companies'>All shops</a></li>
+            <li><a href='/#B'>All shops</a></li>
             <% if current_admin %>
   <li><%= link_to "Logout", "/logout" %></li>
 <% end %>
@@ -27,22 +27,19 @@
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#A">How it works</a></li>
             <li><a href='/inquiries/new'>Get a quote</a></li>
-            <li><a href='/companies'>All shops</a></li>
+            <li><a href='/#B'>All shops</a></li>
             <% if current_admin %>
   <li><%= link_to "Logout", "/logout" %></li>
 <% end %>
-
         </div>
-
       </nav>
 
+      <% if notice %>
+         <script type="text/javascript">
+           Materialize.toast('<%= notice %>', 6000)
+         </script>
+          <% end %>
 
-
-
-
-    <% flash.each do |name, msg| %>
-      <div><%= msg %></div>
-    <% end %>
     <%= yield %>
   </body>
 </html>

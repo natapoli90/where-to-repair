@@ -1,10 +1,28 @@
 
-  <%= link_to "New Company", new_company_path %>
+<div class="section white">
 
-<% @companies.each do |company|%>
-<ul>
-  <li>
-    <%= link_to "#{company.name}", show_company_path(company) %>
-  </li>
-</ul>
+  <div class="row container">
+
+    <div class="row">
+
+      <div class="col s12 l4">
+
+        <% if current_admin %>
+  <%= link_to "New Company", new_company_path %>
 <% end %>
+
+<div class="carousel">
+
+  <a class="carousel-item" href="#one!"><img class = "responsive-img" src="/allspeedmotors.png"></a>
+  <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/yourmechanic.png"></a>
+
+  <a class="carousel-item" href="#one!"><img class = "responsive-img" src="/patgarage.png"></a>
+  <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/lisciousgarage.png"></a>
+
+  <a class="carousel-item" href="#one!"><img class = "responsive-img" src="/mymechanic.png"></a>
+  <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/sfautoworks.png"></a>
+</div>
+</div>
+</div>
+</div>
+</div>

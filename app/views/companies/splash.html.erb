@@ -125,14 +125,42 @@ that are certified for high quality.</label>
 </div></br></br>
 
 
-  <div class="container valign center">
+<div class="container valign center">
       <h4 class = "center-align">What are you waiting for?</h4></br>
   <%= link_to "Request a quote", "/inquiries/new", class: "btn waves-effect waves-light lime darken-1" %>
-OR <%= link_to "See all shops", "/companies", class: "btn waves-effect waves-light lime darken-1" %>
+OR <%= link_to "See all shops", "/#B", class: "btn waves-effect waves-light lime darken-1" %>
     </div>
 </div>
 
   </div>
+
+
+<a name="B"></a>
+<div class="section white valign center">
+
+<br/>
+          <% if current_admin %>
+    <%= link_to "New Company", new_company_path, class: "btn waves-effect waves-light lime darken-1" %>
+  <% end %>
+
+  <div class="carousel">
+<h4 class = "center-align">Slide to see all shops</h4>
+    <a class="carousel-item" href="#one!"><img class = "responsive-img" src="/allspeedmotors.png"></a>
+    <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/yourmechanic.png"></a>
+
+    <a class="carousel-item" href="#one!"><img class = "responsive-img" src="/patgarage.png"></a>
+    <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/lisciousgarage.png"></a>
+
+    <a class="carousel-item" href="#one!"><img class = "responsive-img" src="/mymechanic.png"></a>
+    <a class="carousel-item" href="#two!"><img class = "responsive-img" src="/sfautoworks.png"></a>
+  </div>
+  </div>
+
+
+
+
+
+
 
 
 

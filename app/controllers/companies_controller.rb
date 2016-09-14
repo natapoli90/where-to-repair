@@ -19,10 +19,10 @@ class CompaniesController < ApplicationController
         @company.image_url = "http://i.imgur.com/ixpF82Y.png"
       end
       if @company.save
-        flash[:notice] = "You successfully created new company."
+        flash[:notice] = "New company successfully created."
         redirect_to show_company_path(@company)
       else
-        flash[:notice] = "There are some errors. #{@company.errors.full_messages.join(', ')}. Please, try again"
+        flash[:notice] = "#{@company.errors.full_messages.join(', ')}. Please, try again"
         redirect_to new_company_path
       end
   end
@@ -37,7 +37,7 @@ class CompaniesController < ApplicationController
         @company.image_url = "http://www.fantasticviewpoint.com/wp-content/uploads/2016/07/travel.jpg"
       end
       if @company.update(company_params)
-        flash[:success] = "#{@company.name} successfully updated"
+        flash[:notice] = "Company successfully updated"
         redirect_to show_company_path(@company)
       else
         render :edit
@@ -47,7 +47,7 @@ class CompaniesController < ApplicationController
   def destroy
     @company = Company.find_by_id(params[:company_id])
     @company.destroy
-    flash[:success] = "Company \"#{@company.name}\" was successfully deleted"
+    flash[:notice] = "Company was successfully deleted"
     redirect_to companies_path
   end
 

@@ -15,11 +15,10 @@ class CompanyServicesController < ApplicationController
     @service = Service.new(service_params)
     @company.services << @service
     if @service.save
-
-      flash[:success] = "Your service was successfully submitted"
+      flash[:notice] = "New service was successfully submitted"
       redirect_to company_services_path
     else
-      flash[:notice] = "There are some errors. #{@service.errors.full_messages.join(', ')}. Plese try again."
+      flash[:notice] = "#{@service.errors.full_messages.join(', ')}. Plese try again."
       redirect_to new_service_path
     end
   end
@@ -31,7 +30,7 @@ class CompanyServicesController < ApplicationController
 def update
   @service = Company.find(params[:company_id]).services.find_by(params[:service_id])
   if @service.update(service_params)
-    flash[:success] = "#{@service.name} successfully updated"
+    flash[:notice] = "Service was successfully updated"
     redirect_to company_services_path
   else
     render :edit
@@ -40,7 +39,7 @@ end
 
   def delete
     @service = Company.find(params[:company_id]).services.find_by(params[:service_id]).delete
-    flash[:success] = "service was successfully deleted"
+    flash[:notice] = "Service was successfully deleted"
     redirect_to company_services_path
   end
 

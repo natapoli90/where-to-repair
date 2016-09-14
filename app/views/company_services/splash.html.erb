@@ -1,5 +1,7 @@
-
+<% if current_admin %>
   <%= link_to "New Service", new_service_path %>
+<% end %>
+
 
 <% @company.services.each do |service| %>
 <ul>
