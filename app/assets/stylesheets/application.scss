@@ -24,18 +24,31 @@
  .text-primary-color    { color: #CDDC39; }
  .accent-color          { background:#F4FF81; }
  .primary-text-color    { color: #CDDC39; }
- .secondary-text-color  { color: #757575; }
- .divider-color         { border-color: #F4FF81; }
+ .secondary-text-color  { color: #827717; }
+ .divider-color         { border-color: #CDDC39; }
 
  input:focus {
    border-bottom: 1px solid #F4FF81;
-   box-shadow: 0 1px 0 0 #F4FF81;
+   box-shadow: 0 1px 0 0 #827717;
  }
  .parallax-container {
+   position:relative;
    background-size: cover;
    background-repeat: no-repeat;
     height: 632px;
- }
+}
+.border {
+    position:absolute;
+    top:0px;
+    left:0px;
+    margin:15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    display:block;
+    border:solid 7px #eeff41 ;
+
+
+}
 
  body {
   display: flex;
@@ -48,7 +61,7 @@ main {
 }
 
 .parallax {
-  opacity: .5;
+  opacity: .3;
 }
 
 .form {
