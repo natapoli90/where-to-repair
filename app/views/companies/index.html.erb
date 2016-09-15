@@ -25,12 +25,11 @@
               <% if current_admin %>
     <%= button_to "Edit Company", edit_company_path(@company), method: :get, :class=>"btn waves-effect waves-light lime darken-1" %>OR
     <%= button_to "Delete Company", delete_company_path(@company), method: :delete, :class=>"btn waves-effect waves-light lime darken-1" %>
-
-                      <% end %>
+<% end %>
 
             </div>
             <div class="card-action default-primary-color">
-              <%= link_to "All Services", company_services_path(@company) %>
+              <%= link_to "All Services", company_services_path(f) %>
             </div>
           </div>
         </div>

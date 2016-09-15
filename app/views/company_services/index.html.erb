@@ -1,0 +1,36 @@
+
+<div class="container center">
+  <br  />
+<% if current_admin %>
+<%= link_to "New Service", new_service_path, class: "btn waves-effect waves-light lime darken-1" %>
+<% end %>
+</div>  <br  />
+
+
+<div class="container">
+  <% @company.services.each do |s| %>
+      <div class="row">
+        <div class="col s12">
+
+          <div class="card">
+
+
+
+
+              <div class="card-content">
+
+<h4 class="header"><%= s.category %></h4>
+
+                      <p class="card-title"><%= s.name %></p>
+                  <% if current_admin %>
+                  <%= link_to "Edit Service", edit_company_service_path(@company,s), method: :get, class: "btn waves-effect waves-light lime darken-1"  %>
+                  <%= link_to "Delete Service", delete_company_service_path(@company,s), method: :delete, class: "btn waves-effect waves-light lime darken-1"  %>
+                  <% end %>
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div><% end %></div>
