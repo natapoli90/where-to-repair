@@ -3,6 +3,7 @@ class CompaniesController < ApplicationController
 
   def index
     @companies = Company.all
+    @company = Company.find_by(params[:company_id])
   end
 
   def splash
@@ -21,7 +22,7 @@ class CompaniesController < ApplicationController
       end
       if @company.save
         flash[:notice] = "New company successfully created."
-        redirect_to root_path
+        redirect_to companies_path
       else
         flash[:notice] = "#{@company.errors.full_messages.join(', ')}. Please, try again"
         redirect_to new_company_path
@@ -39,7 +40,7 @@ class CompaniesController < ApplicationController
       end
       if @company.update(company_params)
         flash[:notice] = "Company successfully updated"
-        redirect_to root_path
+        redirect_to companies_path
       else
         render :edit
       end
@@ -49,12 +50,12 @@ class CompaniesController < ApplicationController
     @company = Company.find_by_id(params[:company_id])
     @company.destroy
     flash[:notice] = "Company was successfully deleted"
-    redirect_to root_path
+    redirect_to companies_path
   end
 
   private
 
   def company_params
-    params.require(:company).permit(:name, :address, :city, :phone, :email, :image)
+    params.require(:company).permit(:name, :address, :city, :phone, :email, :image_url)
   end
 end
