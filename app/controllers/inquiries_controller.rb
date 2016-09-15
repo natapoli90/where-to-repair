@@ -8,14 +8,13 @@ class InquiriesController < ApplicationController
 
   def create
     @inquiry= Inquiry.new(params[:id])
-
     @service = Service.find_by(name: params[:name])
     @companies = @service.companies
-    # @emails = []
-    # @companies.each do |co|
-    #   @emails << co.email
-    # end
-    # @inquiry.emails = @emails
+    @emails = []
+    @companies.each do |co|
+      @emails << co.email
+    end
+    @inquiry.emails = @emails
     @inquiry.name = @service.name
     @inquiry.category = @service.category
 
