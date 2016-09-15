@@ -2,9 +2,9 @@ class CompanyServicesController < ApplicationController
 
 
   def index
-    @companies = Company.all
+
     @company = Company.find_by_id(params[:company_id])
-    @service = Company.find(params[:company_id]).services.find_by(params[:service_id])
+    @service = Service.find_by_id(params[:service_id])
   end
 
   def new
