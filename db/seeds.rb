@@ -7,43 +7,60 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Seeding Database!"
 
-Admin.destroy_all
 Company.destroy_all
 Service.destroy_all
 CompanyService.destroy_all
 
-ADMINS = [
-  {
-    email: "admin@admin.com",
-    password_digest: "$2a$10$66teMbHTZMx6wpZenaJ6TewOrEZEUxlOVXxuwqf86JdzKrC/kgavy"
-  }
-]
 
 COMPANIES = [
   {
-    name: "All speed motors",
-    address: "SoMa, 240 6th St",
-    city: "San Francisco, CA 94103",
-    phone: "(415) 255-8140",
+    name: "All Speed Motors",
+    address: "2527 Clement St",
+    city: "San Francisco, CA 94121",
+    phone: "(415) 668-0299",
     email: "natapoli90@gmail.com",
-    image_url: "/allspeedmotors.jpg"
+    image_url: "http://i.imgur.com/RnqHokp.png"
   },
   {
     name: "Your Mechanic",
-    address: "Inner Richmond, 2715 Geary Blvd",
-    city: "San Francisco, CA 94118",
-    phone: "(415) 563-8777",
+    address: "500 3rd St, Suite 525",
+    city: "San Francisco, CA 94114",
+    phone: "(888) 977-8523",
     email: "pxlperfection@gmail.com",
-    image_url: "/allspeedmotors"
+    image_url:"http://i.imgur.com/Hcl9sZX.png"
   },
   {
-    name: "Auto Body Garage",
-    address: "SoMa, 565 Bryant St",
+    name: "Pat’s Garage",
+    address: "1090 26th St",
     city: "San Francisco, CA 94107",
-    phone: "(415) 371-8822",
-    email: "bodygarage@gmail.com",
-    image_url: "http://www.naijaloaded.com.ng/wp-content/uploads/2014/06/YOUNG-SWITT.jpg"
+    phone: "(415) 801-0115",
+    email: "abr415city@gmail.com",
+    image_url: "http://i.imgur.com/YZfdlO4.png"
   },
+  {
+    name: "Luscious Garage",
+    address: "475 9th St",
+    city: "San Francisco, CA 94103",
+    phone: "(415) 875-9030",
+    email: "lsgarage@gmail.com",
+    image_url: "http://i.imgur.com/HAwzVnZ.png"
+  },
+  {
+    name: "My Mechanic",
+    address: "888 Folsom St",
+    city: "San Francisco, CA 94107",
+    phone: "(415) 552-0555",
+    email: "mymechanic@gmail.com",
+    image_url:"http://i.imgur.com/6wMb5CF.png"
+  },
+  {
+    name: "SF Auto Works ",
+    address: "1021 Valencia St",
+    city: "San Francisco, CA 94110",
+    phone: "(415) 282-4300",
+    email: "autoworks@gmail.com",
+    image_url: "http://i.imgur.com/36azydJ.png"
+  }
 ]
 
 SERVICES = [
@@ -144,12 +161,12 @@ COMPANY_SERVICES = [
   }
 ]
 
-Admin.create(ADMINS)
+
 Company.create(COMPANIES)
 Service.create(SERVICES)
 CompanyService.create(COMPANY_SERVICES)
 
-p "#{Admin.count} Admin created!"
+
 p "#{Company.count} Companies created!"
 p "#{Service.count} Services created!"
 p "#{CompanyService.count} created!"

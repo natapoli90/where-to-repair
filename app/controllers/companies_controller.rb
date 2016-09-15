@@ -1,12 +1,13 @@
 class CompaniesController < ApplicationController
-  before_action :logged_in?, except: [:index, :show]
+
 
   def index
     @companies = Company.all
   end
 
-  def show
-    @company = Company.find_by_id(params[:company_id])
+  def splash
+    @companies = Company.all
+    @company = Company.find_by(params[:company_id])
   end
 
   def new
@@ -20,7 +21,7 @@ class CompaniesController < ApplicationController
       end
       if @company.save
         flash[:notice] = "New company successfully created."
-        redirect_to show_company_path(@company)
+        redirect_to root_path
       else
         flash[:notice] = "#{@company.errors.full_messages.join(', ')}. Please, try again"
         redirect_to new_company_path
@@ -38,7 +39,7 @@ class CompaniesController < ApplicationController
       end
       if @company.update(company_params)
         flash[:notice] = "Company successfully updated"
-        redirect_to show_company_path(@company)
+        redirect_to root_path
       else
         render :edit
       end
@@ -48,7 +49,7 @@ class CompaniesController < ApplicationController
     @company = Company.find_by_id(params[:company_id])
     @company.destroy
     flash[:notice] = "Company was successfully deleted"
-    redirect_to companies_path
+    redirect_to root_path
   end
 
   private

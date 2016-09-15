@@ -27,6 +27,10 @@
  .secondary-text-color  { color: #827717; }
  .divider-color         { border-color: #CDDC39; }
 
+.comp-card {
+  background-color: #827717
+}
+
  input:focus {
    border-bottom: 1px solid #F4FF81;
    box-shadow: 0 1px 0 0 #827717;
@@ -81,10 +85,9 @@ main {
   width: 35px;
 }
 
-.carousel .carousel-item {
+.carousel .carousel-item  {
 width : 600px !important;
-margin-top: 170px;
-
+margin-top: 50px;
 }
 
 //   .edit-form {
