@@ -1,9 +1,9 @@
 class CompanyServicesController < ApplicationController
-  before_action :logged_in?, except: [:splash]
 
-  def splash
-    @company = Company.find_by_id(params[:company_id])
-    @service = Service.find_by_id(params[:service_id])
+
+  def index
+    @companies = Company.all
+    @company = Company.find_by(params[:company_id])
   end
 
   def new
