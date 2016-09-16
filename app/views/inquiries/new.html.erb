@@ -1,18 +1,23 @@
-<%= form_for @inquiry do |f| %>
-  <h1>Inquiry form</h1>
-  <%= f.text_field :first_name, placeholder: "First name" %>
+
+<div class="parallax-container">
+  <div class="parallax">
+    <img class = "responsive-img" src="/form.jpg">
+  </div>
+  <div class="container">
+    <div class="card-panel default-primary-color form">
+      <span class="primary-text-color">
+      <h5>Request form</h5>
+  <%= form_for @inquiry do |f| %>
+<%= f.text_field :first_name, placeholder: "First name" %>
   <%= f.text_field :last_name, placeholder: "Last name" %>
   <%= f.text_field :email, placeholder: "Email" %>
-
-<!-- <%= f.collection_select :service, @services, :id, :category, include_blank: true %>
-<%= f.collection_select :service, @services, :id, :name, include_blank: true %> -->
-
-
   <%= f.text_field :car_make, placeholder: "Car make" %>
-  <%= f.text_field :car_model, placeholder: "Car model" %>
+  <%= f.text_field :car_maodel, placeholder: "Car model" %>
   <%= f.text_field :car_year, placeholder: "Car year" %>
-  <%= f.text_area :message, placeholder: "Message" %>
-
-  <%= f.submit "Get a quote" %>
+  <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
 <% end %>
 </form>
+</span>
+</div>
+</div>
+</div>

@@ -5,17 +5,17 @@
   <div class="container">
     <div class="card-panel default-primary-color form">
       <span class="primary-text-color">
-      <h5>New Company</h5>
-      <%= form_for @company do |f| %>
-        <%= f.text_field :name, placeholder: "Name" %>
-        <%= f.text_field :address, placeholder: "Address" %>
-        <%= f.text_field :city, placeholder: "City" %>
-        <%= f.text_field :phone, placeholder: "Phone" %>
-        <%= f.text_field :email, placeholder: "Email" %>
-        <%= f.text_field :image_url, placeholder: "http://my.picture.com/pic.png" %>
-        <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
-      <% end %>
-      </form>
+        <h5>New Company</h5>
+        <%= form_for @company do |f| %>
+          <%= f.text_field :name, placeholder: "Name" %>
+          <%= f.text_field :address, placeholder: "Address" %>
+          <%= f.text_field :city, placeholder: "City" %>
+          <%= f.text_field :phone, placeholder: "Phone" %>
+          <%= f.text_field :email, placeholder: "Email" %>
+          <%= f.text_field :image_url, placeholder: "http://my.picture.com/pic.png" %>
+          <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
+        <% end %>
+        </form>
       </span>
     </div>
   </div>

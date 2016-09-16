@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   patch '/companies/:company_id', to: "companies#update", as: "update_company"
   delete '/companies/:company_id', to: "companies#destroy", as: "delete_company"
 
-
-
   get '/companies/:company_id/services', to: 'company_services#index', as: "company_services"
   get '/companies/:company_id/services/new', to: "company_services#new", as: "new_service"
   post '/companies/:company_id/services', to: "company_services#create", as: "new_company_service"
@@ -23,5 +21,6 @@ Rails.application.routes.draw do
   patch '/companies/:company_id/services/:services_id', to: "company_services#update", as: "update_company_service"
   delete '/companies/:company_id/services/:services_id', to: "company_services#delete", as: "delete_company_service"
 
-  resources :inquiries, only: [:new, :create]
+  get '/inquiries/new', to: 'inquiries#new'
+  post '/inquiries', to: 'inquiries#create'
 end

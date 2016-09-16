@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Successfully logged in."
       redirect_to companies_path
     else
-      flash[:notice] = "Incorrect email or password."
+      flash[:alert] = "Incorrect email or password."
       redirect_to '/login'
     end
   end

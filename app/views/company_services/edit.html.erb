@@ -5,13 +5,13 @@
   <div class="container">
     <div class="card-panel default-primary-color form">
       <span class="primary-text-color">
-      <h3>Edit Service</h3>
-      <%= form_for @service, url: update_company_service_path, method: :patch do |f| %>
-        <%= f.text_field :name, placeholder: "Name" %>
-        <%= f.text_field :category, placeholder: "Category" %>
-        <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
-      <% end %>
-      </form>
+        <h3>Edit Service</h3>
+        <%= form_for @service, url: update_company_service_path, method: :patch do |f| %>
+          <%= f.text_field :name, placeholder: "Name" %>
+          <%= f.text_field :category, placeholder: "Category" %>
+          <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
+        <% end %>
+        </form>
       </span>
     </div>
   </div>
