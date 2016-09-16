@@ -5,9 +5,10 @@ class InquiriesController < ApplicationController
   end
 
   def create
-    @inquiry= Inquiry.new(inquiry_params)
+    @inquiry= Inquiry.new(params[:inquiry])
     respond_to do |format|
     if @inquiry.save
+      InquiryMailer.send_email(@inquiry).deliver_later
       format.html { render action: 'create' }
       format.json { render json: @inquiry, status: :created, location: @inquiry }
     else

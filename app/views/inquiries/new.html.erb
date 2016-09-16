@@ -1,4 +1,4 @@
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="parallax-container">
   <div class="parallax">
     <img class = "responsive-img" src="/form.jpg">
@@ -6,18 +6,18 @@
   <div class="container">
     <div class="card-panel default-primary-color form">
       <span class="primary-text-color">
-      <h5>Request form</h5>
-  <%= form_for @inquiry do |f| %>
-<%= f.text_field :first_name, placeholder: "First name" %>
-  <%= f.text_field :last_name, placeholder: "Last name" %>
-  <%= f.text_field :email, placeholder: "Email" %>
-  <%= f.text_field :car_make, placeholder: "Car make" %>
-  <%= f.text_field :car_maodel, placeholder: "Car model" %>
-  <%= f.text_field :car_year, placeholder: "Car year" %>
-  <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
-<% end %>
-</form>
-</span>
-</div>
-</div>
+        <h5>Request form</h5>
+        <%= form_for @inquiry do |f| %>
+          <%= f.text_field :first_name, placeholder: "First name" %>
+          <%= f.text_field :last_name, placeholder: "Last name" %>
+          <%= f.text_field :email, placeholder: "Email" %>
+          <%= f.text_field :car_make, placeholder: "Car make" %>
+          <%= f.text_field :car_maodel, placeholder: "Car model" %>
+          <%= f.text_field :car_year, placeholder: "Car year" %>
+          <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
+        <% end %>
+        </form>
+      </span>
+    </div>
+  </div>
 </div>
