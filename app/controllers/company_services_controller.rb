@@ -1,10 +1,8 @@
 class CompanyServicesController < ApplicationController
 
-
   def index
-
-    @company = Company.find_by_id(params[:company_id])
-    @service = Service.find_by_id(params[:service_id])
+  @company = Company.find_by_id(params[:company_id])
+  @service = Service.find_by_id(params[:service_id])
   end
 
   def new
@@ -19,7 +17,7 @@ class CompanyServicesController < ApplicationController
       flash[:notice] = "New service was successfully submitted"
       redirect_to company_services_path
     else
-      flash[:notice] = "#{@service.errors.full_messages.join(', ')}. Plese try again."
+      flash[:alert] = "#{@service.errors.full_messages.join(', ')}. Plese try again."
       redirect_to new_service_path
     end
   end

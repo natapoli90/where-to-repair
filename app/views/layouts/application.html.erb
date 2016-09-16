@@ -3,44 +3,45 @@
   <head>
     <title>WTR</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Faster+One" rel="stylesheet">
-
   </head>
 
   <body>
-
-      <nav>
-        <div class="nav-wrapper">
-          <ul id="slide-out" class="side-nav">
-            <li><a href="#A">How it works</a></li>
-            <li><a href='/inquiries/new'>Get a quote</a></li>
-            <li><a href='/#B'>All shops</a></li>
-            <% if current_admin %>
+    <nav>
+      <div class="nav-wrapper">
+        <ul id="slide-out" class="side-nav">
+          <li><a href="#A">How it works</a></li>
+          <li><a href='/inquiries/new'>Get a quote</a></li>
+          <li><a href='/#B'>All shops</a></li>
+          <% if current_admin %>
             <li><%= link_to "Admin", "/companies" %></li>
-  <li><%= link_to "Logout", "/logout" %></li>
-<% end %>
-</ul>
-          <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-          <a href="/" class="brand-logo">HOME</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#A">How it works</a></li>
-            <li><a href='/inquiries/new'>Get a quote</a></li>
-            <li><a href='/#B'>All shops</a></li>
-            <% if current_admin %>
-            <li><%= link_to "Admin", "/companies" %></li>
-  <li><%= link_to "Logout", "/logout" %></li>
-<% end %>
-        </div>
-      </nav>
-
-      <% if notice %>
-         <script type="text/javascript">
-           Materialize.toast('<%= notice %>', 6000)
-         </script>
+            <li><%= link_to "Logout", "/logout" %></li>
           <% end %>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        <a href="/" class="brand-logo">HOME</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#A">How it works</a></li>
+          <li><a href='/inquiries/new'>Get a quote</a></li>
+          <li><a href='/#B'>All shops</a></li>
+          <% if current_admin %>
+            <li><%= link_to "Admin", "/companies" %></li>
+            <li><%= link_to "Logout", "/logout" %></li>
+          <% end %>
+      </div>
+    </nav>
+    <% if notice %>
+      <script type="text/javascript">
+        Materialize.toast('<%= notice %>', 6000, 'green rounded')
+      </script>
+    <% end %>
+    <% if alert %>
+      <script type="text/javascript">
+      Materialize.toast('<%= alert %>', 6000, 'red rounded')
+      </script>
+    <% end %>
 
     <%= yield %>
   </body>

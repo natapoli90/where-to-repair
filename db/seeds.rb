@@ -161,11 +161,9 @@ COMPANY_SERVICES = [
   }
 ]
 
-
 Company.create(COMPANIES)
 Service.create(SERVICES)
 CompanyService.create(COMPANY_SERVICES)
-
 
 p "#{Company.count} Companies created!"
 p "#{Service.count} Services created!"
