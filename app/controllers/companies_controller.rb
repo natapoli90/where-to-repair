@@ -17,7 +17,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.image_url == ""
-      @company.image_url = "http://i.imgur.com/ixpF82Y.png"
+      @company.image_url = "http://i.imgur.com/ZiixHWX.jpg"
     end
     if @company.save
       flash[:notice] = "New company successfully created."
@@ -35,7 +35,7 @@ class CompaniesController < ApplicationController
   def update
     @company = Company.find_by_id(params[:company_id])
     if @company.image_url == ""
-      @company.image_url = "http://www.fantasticviewpoint.com/wp-content/uploads/2016/07/travel.jpg"
+      @company.image_url = "http://i.imgur.com/ZiixHWX.jpg"
     end
     if @company.update(company_params)
       flash[:notice] = "Company successfully updated"
