@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160915191604) do
+ActiveRecord::Schema.define(version: 20160924201212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20160915191604) do
     t.string   "last_name"
     t.string   "email"
     t.string   "car_make"
-    t.string   "car_maodel"
+    t.string   "car_model"
     t.string   "car_year"
     t.string   "message"
     t.datetime "created_at", null: false

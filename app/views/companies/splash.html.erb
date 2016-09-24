@@ -16,75 +16,74 @@
   </div>
 </div>
 
-<a name="A"></a>
-  <div class="section white">
-    <div class="row container">
-      <div class="row">
-        <div class="col s12 l4">
-          <div class="container valign center">
-            <i class="large material-icons secondary-text-color">assignment</i>
-          </div>
-          <span class="card-title  valign center">
-            <span class="valign center">
-            </span>
-            <h4 class="header center-align">Fill in the request</h4>
-            <p class="header center-align">Tell us what happend so we can find the best car repair shops for you.</p>
-          </span>
+<div class="section white">
+  <div class="row container">
+    <div class="row">
+      <div class="col s12 l4">
+        <div class="container valign center">
+          <i class="large material-icons secondary-text-color">assignment</i>
         </div>
-        <div class="col s12 l4">
-          <div class="container valign center">
-            <i class="large material-icons secondary-text-color">contact_mail</i>
-          </div>
-          <span class="card-title">
-            <h4 class="header center-align">Get a quote</h4>
-            <p class="header center-align">Qualified shops will contact you with details via email during 1 hour. </p>
+        <span class="card-title  valign center">
+          <span class="valign center">
           </span>
+          <h4 class="header center-align">Fill in the request</h4>
+          <p class="header center-align">Tell us what happend so we can find the best car repair shops for you.</p>
+        </span>
+      </div>
+      <div class="col s12 l4">
+        <div class="container valign center">
+          <i class="large material-icons secondary-text-color">contact_mail</i>
         </div>
-        <div class="col s12 l4">
-          <div class="container valign center">
-            <i class="large material-icons secondary-text-color">build</i>
-          </div>
-          <span class="card-title">
-            <h4 class="header center-align">Fix your car</h4>
-            <p class="header center-align">Choose the best quote, make an appointment and get it done!</p>
-          </span>
+        <span class="card-title">
+          <h4 class="header center-align">Get a quote</h4>
+          <p class="header center-align">Qualified shops will contact you with details via email during 1 hour. </p>
+        </span>
+      </div>
+      <div class="col s12 l4">
+        <div class="container valign center">
+          <i class="large material-icons secondary-text-color">build</i>
         </div>
+        <span class="card-title">
+          <h4 class="header center-align">Fix your car</h4>
+          <p class="header center-align">Choose the best quote, make an appointment and get it done!</p>
+        </span>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="parallax-container">
-    <div class="parallax">
-      <img class = "responsive-img" src="/back3.jpg">
-    </div>
-    <br />
-    <div class="container">
-      <h4 class = "center-align">Why choose our sevices?</h4><br />
-      <div class="row">
-        <div class="col s6">
-          <div class="card default-primary-color">
-            <div class="card-content">
-              <span class="card-title primary-text-color"><h5>WE DO THE JOB</h5></span>
-              <p>
-                <input class="primary-text-color" type="checkbox" checked="checked" />
-                <label class = "white-text">We bring you the most accurate and fair-price service estimates.</label>
-              </p>
-              <p>
-                <input style="color:#CDDC39;" type="checkbox" checked="checked" />
-                <label class = "white-text">We connect you with service centers who will honor the fair-price estimates.</label>
-              </p>
-              <p>
-                <input class="light-primary-color" type="checkbox" checked="checked" />
-                <label class = "white-text">We works only with trusted service centers that are certified for high quality.</label>
-              </p>
-            </div>
+<div class="parallax-container">
+  <div class="parallax">
+    <img class = "responsive-img" src="/back3.jpg">
+  </div>
+  <br />
+  <div class="container">
+    <h4 class = "center-align">Why choose our sevices?</h4><br />
+    <div class="row">
+      <div class="col s6">
+        <div class="card default-primary-color">
+          <div class="card-content">
+            <span class="card-title primary-text-color"><h5>WE DO THE JOB</h5></span>
+            <p>
+              <input class="primary-text-color" type="checkbox" checked="checked" />
+              <label class = "white-text">We bring you the most accurate and fair-price service estimates.</label>
+            </p>
+            <p>
+              <input style="color:#CDDC39;" type="checkbox" checked="checked" />
+              <label class = "white-text">We connect you with service centers who will honor the fair-price estimates.</label>
+            </p>
+            <p>
+              <input class="light-primary-color" type="checkbox" checked="checked" />
+              <label class = "white-text">We works only with trusted service centers that are certified for high quality.</label>
+            </p>
           </div>
         </div>
-        <div class="col s6">
-          <div class="card default-primary-color">
-            <div class="card-content">
-              <span class="card-title primary-text-color"><h5>YOU SAVE TIME</h5></span>
-<div style="float:left">
+      </div>
+      <div class="col s6">
+        <div class="card default-primary-color">
+          <div class="card-content">
+            <span class="card-title primary-text-color"><h5>YOU SAVE TIME</h5></span>
+            <div style="float:left">
               <p>
                 <input class="primary-text-color" type="checkbox" checked="checked" />
                 <label class = "white-text">You enjoy life</label>
@@ -125,7 +124,6 @@
   </div>
   <br />
 
-
   <div class="container valign center">
     <h4 class = "center-align">What are you waiting for?</h4>
     <br />
@@ -134,35 +132,33 @@
     <%= link_to "See all shops", "/#B", class: "btn waves-effect waves-light lime darken-1" %><br /><br />
   </div>
 </div>
-</div>
 
-<a name="B"></a>
-  <div class="section white valign center">
-  <br />
-    <div class="carousel ">
-      <% @companies.each do |f| %>
-        <a class="carousel-item" >
-          <div class="card ">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class = "activator" src="<%= f.image_url %>">
-            </div>
-            <div class="card-title activator default-primary-color white-text">
-              Learn more<i class="material-icons right">more_vert</i>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title black-text">
-                <i class="material-icons right">close</i>
-                <h4><%= f.name %></h4>
-                <p class="card-title"><%= f.address %></p>
-                <p class="card-title"><%= f.city %></p>
-                <p class="card-title"><%= f.phone %></p>
-              </span>
-            </div>
+<div class="section white valign center">
+<br />
+  <div class="carousel ">
+    <% @companies.each do |f| %>
+      <a class="carousel-item" >
+        <div class="card ">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class = "activator" src="<%= f.image_url %>">
           </div>
-        </a>
-      <% end %>
-    </div>
+          <div class="card-title activator default-primary-color white-text">
+            Learn more<i class="material-icons right">more_vert</i>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title black-text">
+              <i class="material-icons right">close</i>
+              <h4><%= f.name %></h4>
+              <p class="card-title"><%= f.address %></p>
+              <p class="card-title"><%= f.city %></p>
+              <p class="card-title"><%= f.phone %></p>
+            </span>
+          </div>
+        </div>
+      </a>
+    <% end %>
   </div>
+</div>
 
 <footer class="page-footer">
   <div class="container">
