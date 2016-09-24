@@ -1,4 +1,6 @@
 class CompaniesController < ApplicationController
+  include AuthHelper
+  include SessionsHelper
 
   def index
     @companies = Company.all
@@ -12,6 +14,11 @@ class CompaniesController < ApplicationController
 
   def new
     @company = Company.new
+    if auth_through_admin
+      render :new
+    else
+      auth_fail
+    end
   end
 
   def create
@@ -19,17 +26,26 @@ class CompaniesController < ApplicationController
     if @company.image_url == ""
       @company.image_url = "http://i.imgur.com/ZiixHWX.jpg"
     end
-    if @company.save
-      flash[:notice] = "New company successfully created."
-      redirect_to companies_path
+    if auth_through_admin
+      if @company.save
+        flash[:notice] = "New company successfully created."
+        redirect_to companies_path
+      else
+        flash[:alert] = "#{@company.errors.full_messages.join(', ')}. Please, try again."
+        redirect_to new_company_path
+      end
     else
-      flash[:alert] = "#{@company.errors.full_messages.join(', ')}. Please, try again"
-      redirect_to new_company_path
+      auth_fail
     end
   end
 
   def edit
     @company = Company.find_by_id(params[:company_id])
+    if auth_through_admin
+      render :edit
+    else
+      auth_fail
+    end
   end
 
   def update
@@ -37,19 +53,28 @@ class CompaniesController < ApplicationController
     if @company.image_url == ""
       @company.image_url = "http://i.imgur.com/ZiixHWX.jpg"
     end
-    if @company.update(company_params)
-      flash[:notice] = "Company successfully updated"
-      redirect_to companies_path
+    if auth_through_admin
+      if @company.update(company_params)
+        flash[:notice] = "Company successfully updated."
+        redirect_to companies_path
+      else
+        flash[:alert] = "#{@company.errors.full_messages.join(', ')}. Please, try again."
+        render :edit
+      end
     else
-      render :edit
+      auth_fail
     end
   end
 
   def destroy
     @company = Company.find_by_id(params[:company_id])
-    @company.destroy
-    flash[:notice] = "Company was successfully deleted"
-    redirect_to companies_path
+    if auth_through_admin
+      @company.destroy
+      flash[:notice] = "Company was successfully deleted."
+      redirect_to companies_path
+    else
+      auth_fail
+    end
   end
 
   private

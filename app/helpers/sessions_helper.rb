@@ -11,13 +11,14 @@ module SessionsHelper
 
   def logged_in?
     if current_admin == nil
-      redirect_to root_path
+      redirect_to '/login'
     end
   end
 
   def logged_in
     unless logged_in?
-      redirect_to root_path
+      flash[:danger] = "Please log in as Admin"
+      redirect_to '/login'
     end
   end
 
