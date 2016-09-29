@@ -9,7 +9,6 @@ class CompaniesController < ApplicationController
 
   def splash
     @companies = Company.all
-    @company = Company.find_by(params[:company_id])
   end
 
   def new

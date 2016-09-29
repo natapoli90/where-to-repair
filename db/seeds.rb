@@ -69,7 +69,47 @@ SERVICES = [
     category: "Under the hood"
   },
   {
+    name: "Alternators & Starters",
+    category: "Under the hood"
+  },
+  {
+    name: "Belts & Hoses",
+    category: "Under the hood"
+  },
+  {
+    name: "Car Batteries",
+    category: "Under the hood"
+  },
+  {
+    name: "Complete Engine Repair",
+    category: "Under the hood"
+  },
+  {
+    name: "Computerized Engine Diagnostics",
+    category: "Under the hood"
+  },
+  {
+    name: "Cooling System Repair & Service",
+    category: "Under the hood"
+  },
+  {
     name: "Electrical Systems",
+    category: "Under the hood"
+  },
+  {
+    name: "Emission Repair",
+    category: "Under the hood"
+  },
+  {
+    name: "Factory Scheduled Maintenance",
+    category: "Under the hood"
+  },
+  {
+    name: "Fuel Pumps & Lines",
+    category: "Under the hood"
+  },
+  {
+    name: "Fuel System Injector Cleaning",
     category: "Under the hood"
   },
   {
@@ -77,19 +117,131 @@ SERVICES = [
     category: "Under the hood"
   },
   {
+    name: "Radiator Repair & Service",
+    category: "Under the hood"
+  },
+  {
+    name: "Serpentine Belt",
+    category: "Under the hood"
+  },
+  {
+    name: "Timing Belts & Chains",
+    category: "Under the hood"
+  },
+  {
+    name: "Towing Service",
+    category: "Under the hood"
+  },
+  {
+    name: "Transmission Service & Repair",
+    category: "Under the hood"
+  },
+  {
+    name: "Tune Ups",
+    category: "Under the hood"
+  },
+  {
+    name: "Under The Hood",
+    category: "Under the hood"
+  },
+  {
+    name: "ABS Repair",
+    category: "Under the car"
+  },
+  {
+    name: "Axle Repair",
+    category: "Under the car"
+  },
+  {
     name: "Brake Repair & Service",
     category: "Under the car"
   },
   {
-    name: "Universal Joint",
+    name: "Car Tires",
     category: "Under the car"
   },
   {
-    name: "Wheel Balancing",
+    name: "Catalytic Converters",
     category: "Under the car"
+  },
+  {
+    name: "CV Shafts & Joints",
+    category: "Under the car"
+  },
+  {
+    name: "Driveline Repair",
+    category: "Under the car"
+  },
+  {
+    name: "Exhaust & Muffler Repair",
+    category: "Under the car"
+  },
+  {
+  name: "Four-Wheel Drive Repair",
+  category: "Under the car"
+  },
+  {
+  name: "Rack & Pinion Steering Systems",
+  category: "Under the car"
+  },
+  {
+  name: "Shock Absorbers & Struts",
+  category: "Under the car"
+  },
+  {
+  name: "Springs & Suspension",
+  category: "Under the car"
+  },
+  {
+  name: "Steering & Chassis",
+  category: "Under the car"
+  },
+  {
+  name: "SUV & Truck Tires",
+  category: "Under the car"
+  },
+  {
+  name: "Car Tire Repair",
+  category: "Under the car"
+  },
+  {
+  name: "Universal Joint",
+  category: "Under the car"
+  },
+  {
+  name: "Wheel Alignment",
+  category: "Under the car"
+  },
+  {
+  name: "Wheel Balancing",
+  category: "Under the car"
+  },
+  {
+  name: "Wheel Bearings",
+  category: "Under the car"
   },
   {
   name: "Headlights & Headlamps",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Electrical Accessories",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Power Window Repair",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Trailer Hitches",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Windshield Wipers",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Custom Wheels",
   category: "Exterior and Performance"
   },
   {
@@ -97,73 +249,38 @@ SERVICES = [
   category: "Exterior and Performance"
   },
   {
-  name: "Power Window Repair",
+  name: "Cold Air Intakes",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Cold Air Intakes",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Custom Exhaust Systems",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Off-Road Lift Kits",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Performance Exhaust",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Performance Tires",
+  category: "Exterior and Performance"
+  },
+  {
+  name: "Suspension Lowering",
   category: "Exterior and Performance"
   }
 ]
 
-COMPANY_SERVICES = [
-  {
-    company_id: 1,
-    service_id: 1
-  },
-  {
-    company_id: 1,
-    service_id: 4
-  },
-  {
-    company_id: 1,
-    service_id: 5
-  },
-  {
-    company_id: 1,
-    service_id: 7
-  },
-  {
-    company_id: 1,
-    service_id: 8
-  },
-  {
-    company_id: 1,
-    service_id: 9
-  },
-  {
-    company_id: 2,
-    service_id: 1
-  },
-  {
-    company_id: 2,
-    service_id: 2
-  },
-  {
-    company_id: 2,
-    service_id: 3
-  },
-  {
-    company_id: 2,
-    service_id: 5
-  },
-  {
-    company_id: 2,
-    service_id: 6
-  },
-  {
-    company_id: 3,
-    service_id: 7
-  },
-  {
-    company_id: 3,
-    service_id: 8
-  },
-  {
-    company_id: 3,
-    service_id: 9
-  }
-]
-
-Company.create(COMPANIES)
-Service.create(SERVICES)
-CompanyService.create(COMPANY_SERVICES)
+Company.create(COMPANIES).each do |c|
+  c.services.create(SERVICES)
+end
 
 p "#{Company.count} Companies created!"
 p "#{Service.count} Services created!"

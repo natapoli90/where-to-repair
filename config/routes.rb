@@ -17,9 +17,6 @@ Rails.application.routes.draw do
   get '/companies/:company_id/services', to: 'company_services#index', as: "company_services"
   get '/companies/:company_id/services/new', to: "company_services#new", as: "new_service"
   post '/companies/:company_id/services', to: "company_services#create", as: "new_company_service"
-  get '/companies/:company_id/services/:services_id/edit', to: "company_services#edit", as: "edit_company_service"
-  patch '/companies/:company_id/services/:services_id', to: "company_services#update", as: "update_company_service"
-  delete '/companies/:company_id/services/:services_id', to: "company_services#delete", as: "delete_company_service"
 
   get '/inquiries/new', to: 'inquiries#new'
   post '/inquiries', to: 'inquiries#create'
