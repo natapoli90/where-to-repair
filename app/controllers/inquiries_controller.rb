@@ -5,16 +5,14 @@ class InquiriesController < ApplicationController
   end
 
   def create
-    @inquiry= Inquiry.new(params[:inquiry])
-    respond_to do |format|
-      if @inquiry.save
-        InquiryMailer.send_email(@inquiry).deliver_later
-        format.html { render action: 'create' }
-        format.json { render json: @inquiry, status: :created, location: @inquiry }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @inquiry.errors, status: :unprocessable_entity }
-      end
+    @company=Company.all
+    @inquiry = Inquiry.new(inquiry_params)
+    @inquiry.request = request
+    if @inquiry.deliver
+      flash[:notice] = "Message was successfully submitted"
+    else
+      flash[:alert] = "#{@inquiry.errors.full_messages.join(', ')}. Plese try again."
+      render :new
     end
   end
 

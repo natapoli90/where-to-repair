@@ -4,7 +4,7 @@
     <img class = "responsive-img" src="/form.jpg">
   </div>
   <div class="container">
-    <div class="card-panel default-primary-color form">
+    <div class="card-panel default-primary-color form inquiry">
       <span class="primary-text-color">
         <h5>Request form</h5>
         <%= form_for @inquiry do |f| %>
@@ -12,8 +12,11 @@
           <%= f.text_field :last_name, placeholder: "Last name" %>
           <%= f.text_field :email, placeholder: "Email" %>
           <%= f.text_field :car_make, placeholder: "Car make" %>
-          <%= f.text_field :car_maodel, placeholder: "Car model" %>
+          <%= f.text_field :car_model, placeholder: "Car model" %>
           <%= f.text_field :car_year, placeholder: "Car year" %>
+          <%= f.text_field :message, placeholder: "Type your message here" %>
+          <%= f.text_field :nickname, placeholder: "Nickname", class: "hidden" %>
+          <%= f.file_field :file, placeholder: "Attach file" %>
           <%= f.submit "Submit", class: "btn waves-effect waves-light lime darken-1" %>
         <% end %>
         </form>

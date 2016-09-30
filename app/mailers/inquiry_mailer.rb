@@ -1,15 +1,10 @@
 class InquiryMailer < ApplicationMailer
 
-  def send_email(inquiry, service, company)
-    @inquiry = inquiry
-    @service = service
+  def send_email(inquiry, company)
     @company = company
-    # sendgrid_category :use_subject_lines
-    # sendgrid_recipients ['natapoli90@gmail.com', 'abr415city@gmail.com', 'pxlperfection@gmail.com']
     subject = "New quote request"
-    to = @company.email
+    company.email=['natapoli90@gmail.com', 'abr415city@gmail.com', 'pxlperfection@gmail.com']
     from_name = %("#{@inquiry.first_name} #{@inquiry.last_name}" <#{@inquiry.email}>)
-    subject = "Quote Request"
-    mail({from: from_name, to: to, subject: subject})
+    mail({from: from_name, bcc: company.email.join(';'), subject: subject})
   end
 end

@@ -30,6 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'materialize-sass'
 
 gem 'sendgrid-ruby'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
