@@ -39,7 +39,7 @@ class CompaniesController < ApplicationController
   end
 
   def edit
-    @company = Company.find_by_id(params[:company_id])
+    @company = Company.find(params[:company_id])
     if auth_through_admin
       render :edit
     else
@@ -48,7 +48,7 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    @company = Company.find_by_id(params[:company_id])
+    @company = Company.find(params[:company_id])
     if @company.image_url == ""
       @company.image_url = "http://i.imgur.com/ZiixHWX.jpg"
     end
@@ -66,7 +66,7 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
-    @company = Company.find_by_id(params[:company_id])
+    @company = Company.find(params[:company_id])
     if auth_through_admin
       @company.destroy
       flash[:notice] = "Company was successfully deleted."

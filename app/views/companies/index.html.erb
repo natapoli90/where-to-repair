@@ -19,8 +19,8 @@
             <p class="card-title"><%= f.city %></p>
             <p class="card-title"><%= f.phone %></p>
             <% if current_admin %>
-              <%= button_to "Edit Company", edit_company_path(@company), method: :get, :class=>"btn waves-effect waves-light lime darken-1" %>OR
-              <%= button_to "Delete Company", delete_company_path(@company), method: :delete, :class=>"btn waves-effect waves-light lime darken-1" %>
+              <%= button_to "Edit Company", edit_company_path(f.id), method: :get, :class=>"btn waves-effect waves-light lime darken-1" %>OR
+              <%= button_to "Delete Company", delete_company_path(f.id), method: :delete, :class=>"btn waves-effect waves-light lime darken-1" %>
             <% end %>
           </div>
           <div class="card-action default-primary-color">
