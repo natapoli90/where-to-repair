@@ -19,14 +19,13 @@
 ### Technologies used
 
  + Ruby on Rails
- + PostgreSQL database
+ + PostgreSQL
  + Materialize
  + jQuery
+  + Mailer gem
 
 ### Planned features
 
- + Mailer gem
- + Ratings gem
+ + Ratings(reviews) gem
  + Social share button
- + Google maps
- + YELP API
+ + Google maps gem
