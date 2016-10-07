@@ -22,7 +22,7 @@
  + PostgreSQL
  + Materialize
  + jQuery
-  + Mailer gem
+ + Mailer gem
 
 ### Planned features
 
