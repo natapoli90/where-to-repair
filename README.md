@@ -9,7 +9,7 @@
  + [Heroku (user page)](https://where-to-repair.herokuapp.com)
  + [Heroku (admin page)](https://where-to-repair.herokuapp.com/login)
 
- Example Login Information:
+### Example Login Information:
 
  + email: admin@admin.com
  + password: test
