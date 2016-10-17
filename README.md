@@ -2,7 +2,7 @@
 
 ### Description
 
- Where To Repair is a full stack Ruby on Rails app, that will help you get the best quote for car repair in 1 easy step. Just fill in the form, tell us what service do you need and we will contact our partners to get the best price for you. There is also an admin account to maintain companies database.
+ Where To Repair is a full stack Ruby on Rails app that will help you get the best quote for car repair in one easy step. Just fill in the form, tell us what service you need, and we will contact our partners to get the best price for you. There is also an admin account to maintain companies' databases.
 
 ### Links
 
